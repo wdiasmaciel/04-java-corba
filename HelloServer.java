@@ -42,10 +42,10 @@ public class HelloServer {
 
       // Espera requisições dos clientes:
       java.lang.Object sync = new java.lang.Object();
-      synchronized (sync) {
+      synchronized(sync) {
         sync.wait();
       }
-    } catch (Exception e) {
+    } catch(Exception e) {
       System.err.println("ERROR: " + e);
       e.printStackTrace(System.out);
     }
