@@ -31,7 +31,7 @@ public class HelloServer {
       ns.rebind(name, helloRef);
 
       // Espera requisições dos clientes:
-      Object sync = new Object();
+      java.lang.Object sync = new java.lang.Object();
       synchronized (sync) {
         sync.wait();
       }
