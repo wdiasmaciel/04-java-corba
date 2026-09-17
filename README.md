@@ -24,3 +24,26 @@ idlj -version
 ```bash
 idlj -fclient -fserver -oldImplBase Hello.idl 
 ```
+
+## Compilação do Cliente e do Servidor:
+
+```bash
+javac *.java HelloApp/*.java 
+```
+
+## Execução:
+### Servidor de Nomes (máquina localhost):
+
+```bash
+tnameserv -ORBInitialPort 1050
+```
+
+### Servidor de Aplicação
+```bash
+java HelloServer -ORBInitialHost localhost -ORBInitialPort 1050
+```
+
+### Cliente 
+ ```bash
+java HelloClient -ORBInitialHost localhost -ORBInitialPort 1050
+```
