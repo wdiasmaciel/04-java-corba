@@ -1,5 +1,7 @@
 # 04-java-corba
 
+---
+
 ## Instalação no GitHub Codespaces
 
 O `idlj` foi removido a partir do JDK 11. Neste Codespace, instale um JDK 8
@@ -26,12 +28,16 @@ javac -version
 idlj -version
 ```
 
+---
+
 ## Compilação da interface IDL:
 
 ```bash
 export JAVA_HOME="$(sdk home java 8.0.504-amzn)"; export PATH="$JAVA_HOME/bin:$PATH"; hash -r
 idlj -fclient -fserver -oldImplBase Hello.idl 
 ```
+
+---
 
 ## Compilação do Cliente e do Servidor:
 
@@ -40,7 +46,12 @@ export JAVA_HOME="$(sdk home java 8.0.504-amzn)"; export PATH="$JAVA_HOME/bin:$P
 javac *.java HelloApp/*.java 
 ```
 
+---
+
 ## Execução:
+
+---
+
 ### Servidor de Nomes (máquina localhost):
 
 ```bash
@@ -48,17 +59,23 @@ export JAVA_HOME="$(sdk home java 8.0.504-amzn)"; export PATH="$JAVA_HOME/bin:$P
 tnameserv -ORBInitialPort 1050
 ```
 
+---
+
 ### Servidor de Aplicação
 ```bash
 export JAVA_HOME="$(sdk home java 8.0.504-amzn)"; export PATH="$JAVA_HOME/bin:$PATH"; hash -r
 java HelloServer -ORBInitialHost localhost -ORBInitialPort 1050
 ```
 
+---
+
 ### Cliente 
  ```bash
  export JAVA_HOME="$(sdk home java 8.0.504-amzn)"; export PATH="$JAVA_HOME/bin:$PATH"; hash -r
 java HelloClient -ORBInitialHost localhost -ORBInitialPort 1050
 ```
+
+---
 
 **OBS**:
 `hash -r` é um comando interno do `Bash` que limpa o cache de localização dos executáveis. Ele não instala nem altera, apenas atualiza o cache de comandos do shell.
