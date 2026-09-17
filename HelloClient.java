@@ -8,10 +8,10 @@ public class HelloClient {
   public static void main(String args[]) {
     try {
       /*
-       * Cria e inicializa ORB. O segundo argumento é um objeto Properties 
+       * Cria e inicializa o ORB. O segundo argumento é um objeto Properties 
        * com configurações adicionais do ORB. O null significa que nenhuma 
        * propriedade extra foi informada. O ORB usará apenas os argumentos 
-       * da linha de comando (args).
+       * da linha de comando (args: host e port).
        */
       ORB orb = ORB.init(args, null); 
 
