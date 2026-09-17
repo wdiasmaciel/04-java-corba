@@ -1,6 +1,6 @@
 # 04-java-corba
 
-## Instalacao no GitHub Codespaces
+## Instalação no GitHub Codespaces
 
 O `idlj` foi removido a partir do JDK 11. Neste Codespace, instale um JDK 8
 com o SDKMAN e ative-o no terminal antes de compilar o exemplo:
