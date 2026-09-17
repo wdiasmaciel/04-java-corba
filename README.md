@@ -59,3 +59,6 @@ java HelloServer -ORBInitialHost localhost -ORBInitialPort 1050
  export JAVA_HOME="$(sdk home java 8.0.504-amzn)"; export PATH="$JAVA_HOME/bin:$PATH"; hash -r
 java HelloClient -ORBInitialHost localhost -ORBInitialPort 1050
 ```
+
+**OBS**:
+`hash -r` é um comando interno do `Bash` que limpa o cache de localização dos executáveis. Ele não instala nem altera, apenas atualiza o cache de comandos do shell.
