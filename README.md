@@ -15,7 +15,7 @@ hash -r
 - O primeiro comando precisa ser executado apenas uma vez. 
 - O segundo deve ser substituido pelo bloco abaixo em cada novo terminal que for usado para este
 projeto. 
-- O `PATH` do Codespace pode colocar o Java 25 antes do SDKMAN, por isso o `JAVA_HOME` e o `PATH` sao configurados explicitamente:
+- O `PATH` do Codespace pode colocar o Java 25 antes do SDKMAN, por isso o `JAVA_HOME` e o `PATH` são configurados explicitamente:
 
 ```bash
 export JAVA_HOME="$(sdk home java 8.0.504-amzn)"
