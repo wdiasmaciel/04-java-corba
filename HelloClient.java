@@ -1,0 +1,28 @@
+// Arquivo HelloClient.java
+
+import HelloApp.*;
+import org.omg.CosNaming.*;
+import org.omg.CORBA.*;
+
+public class HelloClient {
+  public static void main(String args[]) {
+    try {
+      ORB orb = ORB.init(args, null); // Cria e inicializa ORB.
+
+      // Gera o root naming context:
+      org.omg.CORBA.Object obj = orb.resolve_initial_references("NameService");
+      NamingContext ns = NamingContextHelper.narrow(obj);
+      
+      // Resolve o Object Reference in Naming:
+      NameComponent nc = new NameComponent("Hello", "");
+      NameComponent name[] = { nc };
+      Hello helloRef = HelloHelper.narrow(ns.resolve(name));
+
+      // Chama o objeto servidor Hello e imprime os resultados:
+      String hello = helloRef.sayHello();
+      System.out.println(hello);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}

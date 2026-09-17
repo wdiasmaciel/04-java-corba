@@ -1,4 +1,4 @@
-// Arquivo Hello.idl
+// Arquivo Hello.idl:
 module HelloApp {
   interface Hello {
     string sayHello();
