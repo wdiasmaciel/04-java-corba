@@ -30,7 +30,12 @@ public class HelloServer {
       org.omg.CORBA.Object obj = orb.resolve_initial_references("NameService");
       NamingContext ns = NamingContextHelper.narrow(obj);
 
-      // Associa a Object Reference em Naming:
+      /* 
+       * Associa a Object Reference em Naming:
+       * Resolve o Object Reference in Naming. O segundo parâmetro é a 
+       * categoria ou tipo (kind) do nome. A string vazia significa que 
+       * nenhum tipo foi especificado.
+       */
       NameComponent nc = new NameComponent("Hello", "");
       NameComponent name[] = { nc };
       ns.rebind(name, helloRef);
